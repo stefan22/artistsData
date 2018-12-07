@@ -1,0 +1,48 @@
+{
+
+
+  "extends": "eslint:recommended",
+
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "codeFrame": true
+  },
+
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "plugins": [
+    "babel", "flowtype"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+
+  "rules": {
+
+    "no-undef": 2,
+    "no-unreachable": 2,
+    "no-unused-vars": 0,
+    "no-console": 0,
+    "semi": ["error", "always"],
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "no-constant-condition": 0,
+    "no-useless-escape": 0,
+    "no-dupe-keys": 0,
+    "babel/new-cap": 1,
+    "babel/camelcase": 1,
+    "babel/no-invalid-this": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/semi": 1,
+    "babel/no-unused-expressions": 1,
+    "babel/valid-typeof": 1
+  }
+}
