@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Top Artists</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <style>
-            table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
 
-            td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
+<head>
+  <meta charset="utf-8" />
+  <title>Top Artists</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    #top-artists {
+      visibility: hidden;
+    }
 
-            tr:nth-child(even) {
-                background-color: #dddddd;
-            }
-            .reg-div {
-                margin-top:2em;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>API calls</h1>
-        <div class="heading">
-            <h2>Top Artists</h2>
-            <p>
-            <strong>getTopArtists</strong> returns a JSON artist object array.
-            </p>
+    table {
+      font-family: arial, sans-serif;
+      background-color: #f9f9f9;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-            <div id="top-artists">
-                    ..top artists.
+    .imgs td {
+      border: none;
+      text-align: left;
+    }
 
+    th {
+      text-align: center;
+      padding: 15px;
+      background: #eeeeee;
+      border: 1px solid #dddddd;
+    }
 
+    td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+  </style>
+</head>
 
+<body>
+  <h1>API calls</h1>
+  <div class="heading">
+    <h2>Top Artists</h2>
 
+    <table id="top-artists">
+      <thead>
+        <tr>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
 
+  </div>
 
+</body>
 
-
-
-            </div>
-
-        </div>
-        <div class="reg-div">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur tenetur inventore placeat! Ipsum expedita atque rem iure adipisci tenetur dignissimos, inventore amet. Voluptate, culpa? Dignissimos voluptatem quidem molestiae minima quisquam!
-            </p>
-            <hr />
-
-
-        </div>
-    </body>
 </html>
