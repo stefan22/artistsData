@@ -35,11 +35,6 @@ class TopArtists {
     xhr.send(null);
   } //getTopArtists
 
-  topArtistsData() {
-    const ta = this.getTopArtists();
-    return ta;
-  }
-
   displayTopArtists(data) {
     console.log(data);
     data = data.artists.artist;
