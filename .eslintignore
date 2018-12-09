@@ -1,4 +1,5 @@
 tests/
+out/
 dist/
 package.json
 webpack.config.js

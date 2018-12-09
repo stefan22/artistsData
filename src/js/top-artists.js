@@ -2,15 +2,15 @@ console.log('..top-artists.js.');
 
 class TopArtists {
   constructor(name, playcount, listeners, mbid, url, streamable, smImg, mdImg, lgImg) {
-    this.name = name;
-    this.playcount = playcount;
-    this.listeners = listeners;
-    this.mbid = mbid;
-    this.url = url;
-    this.streamable = streamable;
-    this.smImg = smImg;
-    this.mdImg = mdImg;
-    this.lgImg = lgImg;
+    this.name = name || undefined;
+    this.playcount = playcount || undefined;
+    this.listeners = listeners || undefined;
+    this.mbid = mbid || undefined;
+    this.url = url || undefined;
+    this.streamable = streamable || undefined;
+    this.smImg = smImg || undefined;
+    this.mdImg = mdImg || undefined;
+    this.lgImg = lgImg || undefined;
   }
 
   //api call
@@ -23,12 +23,22 @@ class TopArtists {
       if (xhr.status == 200 && xhr.readyState == 4) {
         dataObj = JSON.parse(xhr.responseText);
         this.displayTopArtists(dataObj);
+        return dataObj;
       }
     };
-    xhr.open('GET', 'http://ws.audioscrobbler.com/2.0/?method=chart.getTopArtists&api_key=' + key + '&limit=25&page1&format=json');
+    xhr.open(
+      'GET',
+      'http://ws.audioscrobbler.com/2.0/?method=chart.getTopArtists&api_key=' +
+				key +
+				'&limit=25&page1&format=json'
+    );
     xhr.send(null);
-
   } //getTopArtists
+
+  topArtistsData() {
+    const ta = this.getTopArtists();
+    return ta;
+  }
 
   displayTopArtists(data) {
     console.log(data);
@@ -53,7 +63,7 @@ class TopArtists {
     for (let i = 0; i < data.length; i++) {
       topArtists.innerHTML += `
           <tr>
-            <td>${i+1}</td>
+            <td>${i + 1}</td>
             <td>${data[i].name}</td>
             <td>${data[i].playcount}</td>
             <td>${data[i].listeners}</td>
@@ -83,29 +93,8 @@ class TopArtists {
 
     topArtists.innerHTML += '</tr></tbody>';
     topArtists.style.visibility = 'visible';
-
   } //displayTopArtists
-
-
 } // Artists
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //public
 export default TopArtists;
