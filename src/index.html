@@ -8,6 +8,37 @@
   <style>
     #top-artists {
       visibility: hidden;
+      width:90%;
+      margin: 0 auto;
+    }
+    #top-tracks {
+      width:100%;
+      margin:0 auto;
+    }
+    .heading {flex:inline-flex; }
+    .heading h2 {
+      text-align: center;
+
+      margin-bottom: 10px;
+
+    }
+    small {
+      margin-left: 10px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+    .nav-list li {
+      padding: 5px 10px;
+    background: #AB47BC;
+    border: #4A148C;
+    margin-bottom: 10px;
+    color: #fff5f5;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(74, 20, 140, 0.75);
+    cursor: pointer;
     }
 
     table {
@@ -16,6 +47,7 @@
       border-collapse: collapse;
       width: 100%;
     }
+    #tables {margin-top:25px;}
 
     .imgs td {
       border: none;
@@ -34,26 +66,62 @@
       text-align: center;
       padding: 8px;
     }
+    .red {color:#9C27B0;}
+
+    .outertopnav {
+      display: inline-block;
+      margin: 20px 20px;
+    }
+    .nav-heading {
+      width: 145px;
+      text-align: right;
+    }
   </style>
 </head>
 
 <body>
-  <h1>API calls</h1>
-  <div class="heading">
-    <h2>Top Artists</h2>
+      <div class="outertopnav">
+          <h2 class="nav-heading">API Calls</h2>
 
-    <table id="top-artists">
-      <thead>
-        <tr>
-          <td></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+          <ul class="nav-list">
+              <li class="nav-item"><a class="nav-link">Top Artists</a></li>
+              <li class="nav-item"><a class="nav-link">Top Tracks</a></li>
+              <li class="nav-item"><a class="nav-link">Coming soon.</a></li>
+          </ul>
+      </div>
+
+  <div class="heading">
+
+    <h2>Top Artists & Top Tracks</h2>
+
+    <div id="tables">
+        <table id="top-artists">
+            <thead>
+              <tr>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+        </table>
+        <table id="top-tracks">
+              <thead>
+                <tr>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+    <!-- endof div id#tables -->
+
 
   </div>
 

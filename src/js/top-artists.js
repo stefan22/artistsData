@@ -1,3 +1,4 @@
+console.clear();
 console.log('..top-artists.js.');
 
 class TopArtists {
@@ -36,7 +37,7 @@ class TopArtists {
   } //getTopArtists
 
   displayTopArtists(data) {
-    console.log(data);
+    // console.log(data);
     data = data.artists.artist;
     let topArtists = document.getElementById('top-artists');
     // topArtists keys
@@ -54,6 +55,14 @@ class TopArtists {
           <th colspan="2">${takeys[6]} (sm - md - lg)</th>
         </tr></thead>`;
 
+    const shortMbid = (n) => {
+      let a = n.split('-');
+      a = a[a.length-1];
+      return (a !== '') ? a : 'n/a';
+    };
+
+
+
     // topArtists tbody
     for (let i = 0; i < data.length; i++) {
       topArtists.innerHTML += `
@@ -62,9 +71,9 @@ class TopArtists {
             <td>${data[i].name}</td>
             <td>${data[i].playcount}</td>
             <td>${data[i].listeners}</td>
-            <td>${data[i].mbid}</td>
+            <td>${shortMbid(data[i].mbid)}</td>
             <td>${data[i].url}</td>
-            <td>${data[i].streamable}</td>
+            <td>${(data[i].streamable !== '0' ? data[i].streamable : 'no')}</td>
             <td class="imgs" colspan="2">
               <table>
                 <tr>

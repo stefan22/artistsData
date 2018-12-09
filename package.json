@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest --watchAll",
     "testop": "./node_modules/.bin/jest ./tests/top-artists.test.js",
+    "testrak": "./node_modules/.bin/jest ./tests/top-tracks.test.js",
     "start": "./node_modules/.bin/webpack-dev-server --env.mode=development && npm run watch",
     "build": "./node_modules/.bin/webpack --env.mode=production",
     "watch": "webpack --watch",
@@ -42,6 +43,7 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.15.0",
     "babel-eslint": "^8.2.6",
     "babel-plugin-transform-es2015-spread": "^6.22.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
