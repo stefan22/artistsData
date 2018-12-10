@@ -3,58 +3,71 @@ console.log('.. top-tracks.');
 import axios from 'axios';
 
 const tracksApi = 'http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=06f1dc77ed67d80a215a3c3b6aa901d3&format=json';
+let tkcontainer =[];
 
 class TopTracks {
   constructor
   (
-    trackname,duration,playcount,listeners,trackMbid,artistName, artistMbid,artistUrl,smImg,mdImg,lgImg
+    trakName,trakDuration,trakPlaycount,trakListeners,trakMbid,trakArtist, trakUrl,smImg,mdImg,lgImg
   )
   {
-    this.trackname = trackname || undefined;
-    this.duration = duration || undefined;
-    this.playcount = playcount || undefined;
-    this.listeners = listeners || undefined;
-    this.trackMbid = trackMbid || undefined;
-    this.artistName = artistName || undefined;
-    this.artistMbid = artistMbid || undefined;
-    this.artistUrl = artistUrl || undefined;
+    this.trakName = trakName || undefined;
+    this.trakDuration = trakDuration || undefined;
+    this.trakPlaycount = trakPlaycount || undefined;
+    this.trakListeners = trakListeners || undefined;
+    this.trakMbid = trakMbid || undefined;
+    this.trakArtist = trakArtist || undefined;
+    this.trakUrl = trakUrl || undefined;
     this.smImg = smImg || undefined;
     this.mdImg = mdImg || undefined;
     this.lgImg = lgImg || undefined;
   }
 
   getTopTracks() {
-    let traks = axios.get(tracksApi);
-    traks
-      .then((res) => {
-        let tks = res.data;
-        //console.log(tks);
-        this.displayTopTracks(tks);
-        return tks;
-      }).catch((error) => {
-        let err = error.message;
-        console.log(err);
-      });
+    if (tkcontainer.length > 5) {
+      this.displayTopTracks(tkcontainer);
+    } else {
+
+      let traks = axios.get(tracksApi);
+      traks
+        .then((res) => {
+          let tks = res.data;
+          // pass them container
+          tks.tracks.track.map((item) => {
+            tkcontainer.push(item);
+          });
+          console.log('\ntkcontainer:\n\n', tkcontainer);
+          this.displayTopTracks(tks);
+          return tks;
+        }).catch((error) => {
+          let err = error.message;
+          console.log(err);
+        });
+    }
 
   } //getTopTracks
 
   displayTopTracks(data) {
-    // console.log(data);
-    data = data.tracks.track;
+    if (tkcontainer.length > 5) {
+      data = tkcontainer;
+    } else {
+      data = data.tracks.track;
+    }
+
     let topTracks = document.getElementById('top-tracks');
     // topTracks thead
     topTracks.innerHTML = `
         <thead><tr>
           <th>#</th>
-          <th>trackname</th>
-          <th>duration</th>
-          <th>playcount</th>
-          <th>listeners</th>
-          <th>track_mbid</th>
-          <th>artist_name</th>
-          <th>artist_mbid</th>
-          <th>artist_url</th>
-          <th colspan="3">image (sm - md - lg)</th>
+          <th>trakName</th>
+          <th>trakDuration</th>
+          <th>trakPlaycount</th>
+          <th>trakListeners</th>
+          <th>trakMbid</th>
+          <th>trakArtist</th>
+          <th>trakMbid</th>
+          <th>trakUrl</th>
+          <th colspan="3">trakImage (sm - md - lg)</th>
         </tr></thead>`;
 
     let shortMbid = (id) => {

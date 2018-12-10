@@ -1,58 +1,69 @@
 console.clear();
 console.log('..top-artists.js.');
-
+let tacontainer = [];
 class TopArtists {
-  constructor(name, playcount, listeners, mbid, url, streamable, smImg, mdImg, lgImg) {
-    this.name = name || undefined;
-    this.playcount = playcount || undefined;
-    this.listeners = listeners || undefined;
-    this.mbid = mbid || undefined;
-    this.url = url || undefined;
-    this.streamable = streamable || undefined;
-    this.smImg = smImg || undefined;
-    this.mdImg = mdImg || undefined;
-    this.lgImg = lgImg || undefined;
+  constructor(topName, topPlaycount, topListeners, topMbid, topUrl, topStreamable, topSmImg, topMdImg, topLgImg) {
+    this.topName = topName || undefined;
+    this.topPlaycount = topPlaycount || undefined;
+    this.topListeners = topListeners || undefined;
+    this.topMbid = topMbid || undefined;
+    this.topUrl = topUrl || undefined;
+    this.topStreamable = topStreamable || undefined;
+    this.topSmImg = topSmImg || undefined;
+    this.topMdImg = topMdImg || undefined;
+    this.topLgImg = topLgImg || undefined;
   }
 
   //api call
   getTopArtists() {
-    const key = '06f1dc77ed67d80a215a3c3b6aa901d3';
-    let dataObj = {};
-    let xhr = new XMLHttpRequest();
-    xhr.overrideMimeType('application/json');
-    xhr.onreadystatechange = () => {
-      if (xhr.status == 200 && xhr.readyState == 4) {
-        dataObj = JSON.parse(xhr.responseText);
-        this.displayTopArtists(dataObj);
-        return dataObj;
-      }
-    };
-    xhr.open(
-      'GET',
-      'http://ws.audioscrobbler.com/2.0/?method=chart.getTopArtists&api_key=' +
-				key +
-				'&limit=25&page1&format=json'
-    );
-    xhr.send(null);
+    if (tacontainer.length > 5) {
+      this.displayTopArtists(tacontainer);
+    }
+    else {
+      const key = '06f1dc77ed67d80a215a3c3b6aa901d3';
+      let dataObj = {};
+      let xhr = new XMLHttpRequest();
+      xhr.overrideMimeType('application/json');
+      xhr.onreadystatechange = () => {
+        if (xhr.status == 200 && xhr.readyState == 4) {
+          dataObj = JSON.parse(xhr.responseText);
+          // pass them to arry
+          dataObj.artists.artist.map((item) => {
+            tacontainer.push(item);
+          });
+          console.log('\ntacontainer:\n\n', tacontainer);
+          this.displayTopArtists(dataObj);
+          return dataObj;
+        }
+      };
+      xhr.open(
+        'GET',
+        'http://ws.audioscrobbler.com/2.0/?method=chart.getTopArtists&api_key=' +
+            key +
+            '&limit=25&page1&format=json'
+      );
+      xhr.send(null);
+    }
   } //getTopArtists
 
   displayTopArtists(data) {
-    // console.log(data);
-    data = data.artists.artist;
+    if (tacontainer.length > 5) {
+      data = tacontainer;
+    } else {
+      data = data.artists.artist;
+    }
+
     let topArtists = document.getElementById('top-artists');
-    // topArtists keys
-    const takeys = Object.keys(data[0]);
-    // topArtists thead
     topArtists.innerHTML = `
         <thead><tr>
           <th>#</th>
-          <th>${takeys[0]}</th>
-          <th>${takeys[1]}</th>
-          <th>${takeys[2]}</th>
-          <th>${takeys[3]}</th>
-          <th>${takeys[4]}</th>
-          <th>${takeys[5]}</th>
-          <th colspan="2">${takeys[6]} (sm - md - lg)</th>
+          <th>topName</th>
+          <th>topPlaycount</th>
+          <th>topListeners</th>
+          <th>topMbid</th>
+          <th>topUrl</th>
+          <th>topStreamable</th>
+          <th colspan="2">topImages (sm - md - lg)</th>
         </tr></thead>`;
 
     const shortMbid = (n) => {
@@ -60,8 +71,6 @@ class TopArtists {
       a = a[a.length-1];
       return (a !== '') ? a : 'n/a';
     };
-
-
 
     // topArtists tbody
     for (let i = 0; i < data.length; i++) {
@@ -98,6 +107,7 @@ class TopArtists {
     topArtists.innerHTML += '</tr></tbody>';
     topArtists.style.visibility = 'visible';
   } //displayTopArtists
+
 } // Artists
 
 //public

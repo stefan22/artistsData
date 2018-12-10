@@ -3,6 +3,7 @@ console.log('..index.js.');
 
 // displays top 25 ranking artists / api call
 import TopArtists from './js/top-artists';
+// displays top 50 top tracks info / api call
 import TopTracks from './js/top-tracks';
 
 
@@ -25,7 +26,6 @@ const headingHighlight = (table) => {
 
 const getTopTracks = () => {
   let tracks = new TopTracks();
-  //hide ta
   document.getElementById('top-artists').style.display = 'none';
   document.getElementById('top-tracks').style.display = 'block';
   headingHighlight('tracks');
@@ -40,6 +40,7 @@ const getTopArtists = () => {
   return artists.getTopArtists();
 };
 
+// init with topArtists at page load
 const initFn = {
   init: () => {
     getTopArtists();
@@ -48,8 +49,6 @@ const initFn = {
     getTopTracks();
   }
 };
-
-export default getTopArtists;
 
 
 const isTableClick = (e) => {
@@ -60,8 +59,10 @@ const isTableClick = (e) => {
   else if (tc.indexOf('Tracks') !== -1 ) {
     return getTopTracks();
   }
-
 };
+
+
+
 
 // buttons
 const toplinks = document.querySelectorAll('.nav-list')[0];
