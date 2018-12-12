@@ -1,10 +1,12 @@
-console.clear();
+
 console.log('..index.js.');
 
 // displays top 25 ranking artists / api call
 import TopArtists from './js/top-artists';
 // displays top 50 top tracks info / api call
 import TopTracks from './js/top-tracks';
+// artist info
+import ArtistBio from './js/artist/artist-info';
 
 
 
@@ -40,6 +42,13 @@ const getTopArtists = () => {
   return artists.getTopArtists();
 };
 
+const artistBio = () => {
+  let bio = new ArtistBio();
+  bio.getArtistBio();
+
+}; //artistBio
+
+
 // init with topArtists at page load
 const initFn = {
   init: () => {
@@ -58,6 +67,9 @@ const isTableClick = (e) => {
   }
   else if (tc.indexOf('Tracks') !== -1 ) {
     return getTopTracks();
+  }
+  else if(tc.indexOf('Bio') !== -1) {
+    return artistBio();
   }
 };
 

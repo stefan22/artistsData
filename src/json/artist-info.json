@@ -1,0 +1,229 @@
+{
+  "artist": {
+    "name": "Ariana Grande",
+    "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+    "url": "https://www.last.fm/music/Ariana+Grande",
+    "image": [
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": "small"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": "medium"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": "large"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": "extralarge"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": "mega"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c3ef493a240c1e08fbea682a28fbd81f.png",
+        "size": ""
+      }
+    ],
+    "streamable": "0",
+    "ontour": "1",
+    "stats": {
+      "listeners": "1011349",
+      "playcount": "77235114"
+    },
+    "similar": {
+      "artist": [
+        {
+          "name": "Nicki Minaj",
+          "url": "https://www.last.fm/music/Nicki+Minaj",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e1e53d91497713b4f664dc6b5a937fbe.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Little Mix",
+          "url": "https://www.last.fm/music/Little+Mix",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8cb924fcf4cfefb6526468b5ae8f4f44.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Ariana Grande & Nathan Sykes",
+          "url": "https://www.last.fm/music/Ariana+Grande+&+Nathan+Sykes",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f6b4d9348afa422bc269e60f2ed7db61.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Selena Gomez",
+          "url": "https://www.last.fm/music/Selena+Gomez",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/1ffec3e922667ae7482cc3d6fed5b5d0.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Troye Sivan",
+          "url": "https://www.last.fm/music/Troye+Sivan",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/b1811a61476dd82326b50241156d56b7.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/b1811a61476dd82326b50241156d56b7.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/b1811a61476dd82326b50241156d56b7.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/b1811a61476dd82326b50241156d56b7.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/b1811a61476dd82326b50241156d56b7.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/b1811a61476dd82326b50241156d56b7.png",
+              "size": ""
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "tag": [
+        {
+          "name": "pop",
+          "url": "https://www.last.fm/tag/pop"
+        },
+        {
+          "name": "female vocalists",
+          "url": "https://www.last.fm/tag/female+vocalists"
+        },
+        {
+          "name": "rnb",
+          "url": "https://www.last.fm/tag/rnb"
+        },
+        {
+          "name": "Ariana Grande",
+          "url": "https://www.last.fm/tag/Ariana+Grande"
+        },
+        {
+          "name": "nickelodeon",
+          "url": "https://www.last.fm/tag/nickelodeon"
+        }
+      ]
+    },
+    "bio": {
+      "links": {
+        "link": {
+          "#text": "",
+          "rel": "original",
+          "href": "https://last.fm/music/Ariana+Grande/+wiki"
+        }
+      },
+      "published": "22 Apr 2010, 15:54",
+      "summary": "Ariana Grande (born Ariana Grande-Butera, June 26, 1993 in Boca Raton, Florida, United States), is an American Grammy award-nominated actress, singer, and songwriter.\n\nShe was born to graphic designer Edward Butera and Joan Grande (the CEO of Hose-McCann Communications), Grande began singing and acting at an early age, appearing in local theater productions. In 2008, when she was 15 years old, she landed the role of Charlotte in the Broadway production of 13; her performance was well-received, winning a National Youth Theatre Association Award. <a href=\"https://www.last.fm/music/Ariana+Grande\">Read more on Last.fm</a>",
+      "content": "Ariana Grande (born Ariana Grande-Butera, June 26, 1993 in Boca Raton, Florida, United States), is an American Grammy award-nominated actress, singer, and songwriter.\n\nShe was born to graphic designer Edward Butera and Joan Grande (the CEO of Hose-McCann Communications), Grande began singing and acting at an early age, appearing in local theater productions. In 2008, when she was 15 years old, she landed the role of Charlotte in the Broadway production of 13; her performance was well-received, winning a National Youth Theatre Association Award. Following an appearance in the 2010 Desmond Child-written musical Cuba Libre, Grande was cast as Cat Valentine in the Nickelodeon television program Victorious. The show ran until 2012, at which time Grande's Cat Valentine was spun off into a show called Sam & Cat, which also starred Jennette McCurdy of iCarly.\n\nAs she kept herself busy with television, Grande began to pursue a musical career. She frequently made appearances at sporting events and with symphonies, and she made her first appearances on record via the soundtracks to Victorious. In 2011, she released the single \"Put Your Hearts Up,\" which was cut during sessions for a teen-oriented pop album; she later disowned the single due to its kiddie feel. Grande felt much more comfortable with \"The Way,\" her 2013 single featuring Mac Miller. This signaled a mature direction and audiences responded, taking it to the Top Ten in the U.S., where it was eventually certified triple platinum. It was the first single from her 2013 debut, Yours Truly, which also featured hits in \"Baby I\" and \"Right There.\"\n\nAt the end of the year she released a seasonal EP called Christmas Kisses, but her real efforts went into the recording of her second album, My Everything. Preceded by the single \"Problem\" -- a song that featured a guest spot from Iggy Azalea, the \"it girl\" of the summer of 2014; it peaked at two on the U.S. charts and was certified double platinum -- the album featured a host of different producers, including Max Martin, Shellback, Ryan Tedder, and Benny Blanco. It was released at the end of August 2014, hitting number one on charts across the globe. Subsequent singles featured assists by Zedd (\"Break Free\"), Jessie J and Nicki Minaj (\"Bang Bang\"), and the Weeknd (\"Love Me Harder\"). At one point in 2014, three of her songs were in the Billboard Top Ten at the same time, a feat matched only be Adele. By the time fifth single \"One Last Time\" charted in early 2015, My Everything had sold nearly 600,000 copies.\n\nAs that album's cycle wound down, Grande guest-starred on Ryan Murphy's campy slasher series Scream Queens and she also recorded another holiday EP, Christmas & Chill. In October 2015, Grande released the single \"Focus,\" which debuted at number seven on the Hot 100 and was certified platinum the following January. That February, she announced her third album, Dangerous Woman, and released the album's title track as a single in March. The song hit number eight on the Hot 100, making Grande the first artist to have the lead single from each of her first three albums debut in the Top Ten. Featuring collaborations with Macy Gray, Future, and Nicki Minaj, the album appeared in May 2016 and debuted at number two. It eventually went platinum, helped by a trio of Top Ten hits and a Grammy nomination for Best Pop Vocal Album. Grande began 2017 by duetting with John Legend on \"Beauty and the Beast,\" the title track for Disney's live-action remake of their 1991 animated classic. She then mounted her Dangerous Woman Tour, performing across North America and Europe during the first half of 2017.\n\nTragedy struck on May 22, 2017, when a suicide bomber attacked Grande's concert at the Manchester Arena in Manchester, England. Grande returned to performing on June 4, when she held a star-studded charity concert called One Love Manchester to aid the victims of the bombing. Following the show, she resumed the Dangerous Woman Tour, which concluded in Hong Kong that September.\n\nIn April 2018, Grande kicked off promotion for her fourth album, Sweetener, by issuing the single \"No Tears Left to Cry,\" which debuted at number three on the Hot 100. She then collaborated with several other artists like Nicki Minaj and Troye Sivan before releasing Sweetener. She released thank u, next for her 5th studio album later that year in November. thank u, next became Ariana's first #1 on the Hot 100 subsequently, and also broke many streaming records. <a href=\"https://www.last.fm/music/Ariana+Grande\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply."
+    }
+  }
+}
