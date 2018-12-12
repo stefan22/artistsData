@@ -1,4 +1,3 @@
-console.clear();
 console.log('..top-artists.js.');
 let tacontainer = [];
 class TopArtists {
@@ -31,7 +30,7 @@ class TopArtists {
           dataObj.artists.artist.map((item) => {
             tacontainer.push(item);
           });
-          console.log('\ntacontainer:\n\n', tacontainer);
+          // console.log('\ntacontainer:\n\n', tacontainer);
           this.displayTopArtists(dataObj);
           return dataObj;
         }

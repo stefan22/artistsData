@@ -1,4 +1,3 @@
-console.clear();
 console.log('.. top-tracks.');
 import axios from 'axios';
 
