@@ -5,7 +5,7 @@
 - refactored apikey top & artist charts
 - limits one server call per api
 - separate key module
-- showing artist-bio records
+- showing artist-bio records (template started with object literals)
 - jest tests
 - eslint
 [in progress..]
