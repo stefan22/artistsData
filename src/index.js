@@ -6,7 +6,7 @@ import TopArtists from './js/top-artists';
 // displays top 50 top tracks info / api call
 import TopTracks from './js/top-tracks';
 // artist info
-import ArtistBio from './js/artist/artist-info';
+import ArtistBio from './js/artist/artist-bio';
 
 
 
