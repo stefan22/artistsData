@@ -16,11 +16,11 @@ import ArtistBio from './js/artist/artist-bio';
 
 const headingHighlight = (table) => {
   if(table == 'tracks') {
-    document.querySelector('.heading h2')
+    document.querySelector('.charts h2')
       .innerHTML = '<h2>Top Artists & <span class="red">Top Tracks</span> </h2><small>tables</small>';
   }
   else if (table == 'artists') {
-    document.querySelector('.heading h2')
+    document.querySelector('.charts h2')
       .innerHTML = '<h2><span class="red">Top Artists</span> & Top Tracks </h2><small>tables</small>';
   }
 
@@ -29,6 +29,8 @@ const headingHighlight = (table) => {
 const getTopTracks = () => {
   let tracks = new TopTracks();
   document.getElementById('top-artists').style.display = 'none';
+  document.getElementById('artist-bio').style.display = 'none';
+  document.getElementById('artist-bio').className = 'hide';
   document.getElementById('top-tracks').style.display = 'block';
   headingHighlight('tracks');
   return tracks.getTopTracks();
@@ -37,6 +39,8 @@ const getTopTracks = () => {
 const getTopArtists = () => {
   let artists = new TopArtists();
   document.getElementById('top-tracks').style.display = 'none';
+  document.getElementById('artist-bio').style.display = 'none';
+  document.getElementById('artist-bio').className = 'hide';
   document.getElementById('top-artists').style.display = 'block';
   headingHighlight('artists');
   return artists.getTopArtists();
@@ -44,6 +48,21 @@ const getTopArtists = () => {
 
 const artistBio = () => {
   let bio = new ArtistBio();
+  let bioheading = document.querySelector('.tantt');
+  bioheading.innerHTML = `
+    <div>
+      <h2>
+        <span class="red">Artist Bio:
+        <small>(to be pass from top artist)</small>
+      </h2>
+      <small><a href="#">Select another bio from Top Artists</a></small>
+    </div>
+  `;
+  document.getElementById('top-tracks').style.display = 'none';
+  document.getElementById('top-artists').style.display = 'none';
+  document.getElementById('artist-bio').style.display = 'block';
+  document.getElementById('artist-bio').className = 'show';
+
   bio.getArtistBio();
 
 }; //artistBio

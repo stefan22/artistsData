@@ -15,8 +15,8 @@
       width:100%;
       margin:0 auto;
     }
-    .heading {flex:inline-flex; }
-    .heading h2 {
+    .charts {flex:inline-flex; }
+    .charts h2 {
       text-align: center;
 
       margin-bottom: 10px;
@@ -81,12 +81,19 @@
       padding: 0 5px;
     }
 
-    #artist-bio {
+    #artist-bio.hide {
       display: none;
+    }
+    #artist-bio.show {
+      display:block;
+      width:80%;
+      margin:0 auto;
     }
     #artist-bio.artist-bio {
       display: block;
     }
+
+
 
   </style>
 </head>
@@ -99,15 +106,14 @@
               <li class="nav-item"><a class="nav-link">Top Artists</a></li>
               <li class="nav-item"><a class="nav-link">Top Tracks</a></li>
 
-              <span>(should be pass on top artist)</span>
-              <li class="nav-item"><a class="nav-link">Console Artist Bio</a></li>
+              <li class="nav-item"><a class="nav-link">Artist Bio</a></li>
               <li class="nav-item"><a class="nav-link">Coming soon.</a></li>
           </ul>
       </div>
 
-  <div class="heading">
+  <div class="charts">
 
-    <h2>Top Artists & Top Tracks</h2>
+    <h2 class="tantt">Top Artists & Top Tracks</h2>
 
     <div id="tables">
         <table id="top-artists">
@@ -142,7 +148,7 @@
 
   </div>
 
-  <div id="artist-bio" class="">
+  <div id="artist-bio" class="hide">
 
   </div>
 
