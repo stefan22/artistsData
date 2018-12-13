@@ -36,7 +36,7 @@ class TopTracks {
           tks.tracks.track.map((item) => {
             tkcontainer.push(item);
           });
-          console.log('\ntkcontainer:\n\n', tkcontainer);
+          // console.log('\ntkcontainer:\n\n', tkcontainer);
           this.displayTopTracks(tks);
           return tks;
         }).catch((error) => {

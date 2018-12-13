@@ -67,11 +67,6 @@ class TopArtists {
           <th colspan="2">topImages (sm - md - lg)</th>
         </tr></thead>`;
 
-    // const shortMbid = (n) => {
-    //   let a = n.split('-');
-    //   a = a[a.length-1];
-    //   return (a !== '') ? a : 'n/a';
-    // };
     const shortMbid = (n) => {
       let a = n.split('-');
       a = a[a.length-1];
