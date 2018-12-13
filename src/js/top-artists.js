@@ -1,4 +1,6 @@
 console.log('..top-artists.js.');
+const APIKEY = require('./artist/api-key.js');
+
 let tacontainer = [];
 class TopArtists {
   constructor(topName, topPlaycount, topListeners, topMbid, topUrl, topStreamable, topSmImg, topMdImg, topLgImg) {
@@ -15,11 +17,11 @@ class TopArtists {
 
   //api call
   getTopArtists() {
+    const KEY = String(APIKEY.APIKEY);
     if (tacontainer.length > 5) {
       this.displayTopArtists(tacontainer);
     }
     else {
-      const key = '06f1dc77ed67d80a215a3c3b6aa901d3';
       let dataObj = {};
       let xhr = new XMLHttpRequest();
       xhr.overrideMimeType('application/json');
@@ -38,7 +40,7 @@ class TopArtists {
       xhr.open(
         'GET',
         'http://ws.audioscrobbler.com/2.0/?method=chart.getTopArtists&api_key=' +
-            key +
+        KEY +
             '&limit=25&page1&format=json'
       );
       xhr.send(null);
@@ -65,11 +67,17 @@ class TopArtists {
           <th colspan="2">topImages (sm - md - lg)</th>
         </tr></thead>`;
 
+    // const shortMbid = (n) => {
+    //   let a = n.split('-');
+    //   a = a[a.length-1];
+    //   return (a !== '') ? a : 'n/a';
+    // };
     const shortMbid = (n) => {
       let a = n.split('-');
       a = a[a.length-1];
       return (a !== '') ? a : 'n/a';
     };
+
 
     // topArtists tbody
     for (let i = 0; i < data.length; i++) {
@@ -105,6 +113,7 @@ class TopArtists {
 
     topArtists.innerHTML += '</tr></tbody>';
     topArtists.style.visibility = 'visible';
+    return true;
   } //displayTopArtists
 
 } // Artists

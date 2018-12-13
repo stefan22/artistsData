@@ -1,9 +1,10 @@
 console.log('.. top-tracks.');
 import axios from 'axios';
+const APIKEY = require('./artist/api-key.js');
 
-const tracksApi = 'http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=06f1dc77ed67d80a215a3c3b6aa901d3&format=json';
+const KEY = String(APIKEY.APIKEY);
+const tracksApi = 'http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=' + KEY  + '&limit=25&page1&format=json';
 let tkcontainer =[];
-
 class TopTracks {
   constructor
   (
@@ -64,12 +65,12 @@ class TopTracks {
           <th>trakListeners</th>
           <th>trakMbid</th>
           <th>trakArtist</th>
-          <th>trakMbid</th>
+          <th>ArtistMbid</th>
           <th>trakUrl</th>
           <th colspan="3">trakImage (sm - md - lg)</th>
         </tr></thead>`;
 
-    let shortMbid = (id) => {
+    const shortMbid = (id) => {
       let d = id.split('-');
       d = d[d.length - 1];
       return (d !== '' && d.length > 0) ? d : 'n/a';
@@ -111,6 +112,7 @@ class TopTracks {
 
     topTracks.innerHTML += '</tr></tbody>';
     topTracks.style.visibility = 'visible';
+    return true;
   } //displayTopTracks
 
 
